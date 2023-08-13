@@ -1,0 +1,105 @@
+.main2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 3rem 1.4rem;
+}
+
+.cards2{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 1.8rem;
+    margin-left: 0.6rem;
+
+}
+
+.left{
+    width: 18rem;
+     
+
+        &-catagory{
+
+            &-fruit{
+
+                &-text{
+                    
+                    font-weight: 100;
+                    font-size: 16px;
+                    font-family: sans-serif;
+                    padding: 1.2rem;
+                    letter-spacing: 1.5px;
+                    color: rgba($color: #000000, $alpha: 0.9);
+
+                    &-plusicon{
+                        height: 0.7rem;
+                        width: 0.7rem;
+                        margin-top: -11px;
+                    }
+                }
+
+                &-cat{   
+                    display: flex;
+                    flex-direction: column;
+                     //display: none;
+
+                    &-link{
+                        text-decoration: none;
+                        
+                        color: rgba($color: #000000, $alpha: 0.7);
+                        padding: 1rem 1rem;
+                        margin-left:1.5rem ;
+                        font-size: 14px;
+                        letter-spacing: 1.3px;
+                        font-family: sans-serif;
+                        font-weight: 100;
+                        border: 0.4px solid rgba($color: #000000, $alpha: 0.08);
+                        border-left: rgba($color: #000000, $alpha: 0);
+                        // border-right: rgba($color: #000000, $alpha: 0.1);
+                        // border-right: rgba($color: #000000, $alpha: 0.5);
+
+                        &:hover{
+                            color: black;
+                        }
+                         
+                    
+                    }
+                }  
+ 
+                
+            } 
+        }
+
+
+
+}
+
+.right{
+
+    &-text{
+        margin-left: 15px;
+        &-head{
+                font-size: 14px;
+                color: #000000;
+                opacity: 0.5;
+                font-weight: 100;
+                font-family: sans-serif;
+                padding: 0.6rem 0;
+        }
+    
+        &-span{
+            font-size: 16px;
+            font-weight: 500;
+            font-family: sans-serif;
+        }   
+    }
+
+     
+}
+
+#check2{
+    font-size: 5rem;
+
+}
+
+#check2{
+    display: none;
+}

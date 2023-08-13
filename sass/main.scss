@@ -1,0 +1,31 @@
+@import "homepage/header.scss";
+@import "homepage/best_deals.scss";
+@import "homepage/categories.scss";
+@import "homepage/footer.scss";
+@import "homepage/mixins.scss";
+@import "fruitspage/fruits.scss";
+@import "detailpage/lemone.scss";
+ 
+:root{
+    --color-primay:#4fbc90; 
+    --color-primay-green:#165241; 
+    --color-secondary-white:#f8f9fa; 
+    --color-secondary-grey: #dee2e6;
+    --color-grey-dark: #999999; 
+    --color-red:rgba(229, 63, 63, 0.885);
+    --color-orange:#fe6d0f;
+
+}   
+
+
+
+////////////////////// MEDIA QUERY /////////////////////////
+
+
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}

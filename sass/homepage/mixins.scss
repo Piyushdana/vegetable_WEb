@@ -1,0 +1,23 @@
+//////media Query /////////
+
+/****** BREAK POINTS /***********
+
+0-600 phone
+600-900 table portrait
+900-1200 tablet landscape
+1200-1800 deskstop
+1800> big desktps
+*/
+
+// 1em = 16px
+@mixin respond($breakpoint){
+
+    @if $breakpoint == samsung-A71{
+        @media (max-width: 25.75em) {@content};     //samsung mobile
+    }
+
+     
+    
+}
+
+ 

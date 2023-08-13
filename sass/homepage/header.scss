@@ -1,0 +1,346 @@
+$color-primay-green:#165241; 
+$color-secondary-white:#f8f9fa;
+$color-secondary-grey: #dee2e6;
+$color-grey-dark: #999999;
+
+@mixin transition {
+    transition: all .3s ease-in-out;
+}
+
+@mixin respons($breakpoint){
+
+    @if $breakpoint == phone{
+        @media (max-width: 37.5em) {@content};  //600px
+
+
+    }
+    @if $breakpoint == samsung-A71{
+        @media (max-width: 25.75em) {@content};     //samsung mobile
+    }
+ 
+    @if $breakpoint == tab-port{
+        @media (max-width: 56.25em) {@content};     //900px
+    }
+
+    @if $breakpoint == tab-land{ 
+        @media (max-width: 75em) {@content};        //1200px
+    } 
+
+    @if $breakpoint == big-desk {
+        @media (max-width: 112.5em) {@content};     //1800px
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .header{
+     
+//  }
+
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 8px;
+     
+    position: absolute;
+    cursor: pointer;
+    display: none;
+
+    @include respons(samsung-A71){
+        display: block;
+        margin-left: 79rem;
+        font-size: 71px;
+    }
+}
+
+
+#check{
+    display: none;
+    
+    @include respons(samsung-A71){
+        display: block;
+    }
+
+
+}
+
+#check:checked ~ #nav-rightt{
+    display: block;
+}
+
+ 
+
+
+.nav{
+    
+    display: flex; 
+    align-items: center;   
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: var($color-grey-dark);
+    box-shadow: 6px -15px 26px rgb(30, 29, 29);
+     
+    @include respons(samsung-A71){
+        flex-direction: column;
+        position: relative;
+        width: 95rem;
+
+    }
+ 
+    &-left{
+        display: flex;
+        align-items: center;
+        margin-left: 2.2rem;
+        
+        @include respons(samsung-A71){
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: -12rem;
+        } 
+         
+
+        &-logo{
+            height: 3.1rem;
+            width: 9rem;
+
+            @include respons(samsung-A71){
+                height: 8.1rem;
+                width: 26rem;
+                margin-left: 2em;
+            } 
+                 
+        }
+
+        &-text{
+
+            @include respons(samsung-A71){
+                font-size: 2.8rem;
+            } 
+             
+            
+            
+        }
+
+        &-svg{
+            width: 1.2rem;
+            height: 1.3rem;
+             margin-left: 1rem;
+             fill: var(--color-grey-dark);
+
+             @include respons(samsung-A71){
+                 height: 3rem;
+                 width: 4rem;
+                 margin-left: 21rem;
+            }  
+        } 
+    }
+    
+    &-center{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-search{
+            height: 0.1rem;
+            width: 35rem;
+            margin-left: -1rem;
+            padding: 1.3rem;
+            border-radius: 86px;
+            //border: 2px solid var($color-secondary-grey);
+            border: 2px solid #dee2e6;
+
+
+            @include respons(samsung-A71){
+                display: none;
+            }
+            
+        }
+
+        &-iconsearch{
+            height: 1.3rem;
+            width: 2rem;
+            fill: var(--color-grey-dark);
+            margin-left: -2.8rem;
+        }
+    }
+
+    
+
+    
+    &-right{
+
+         
+        @include respons(samsung-A71){
+            display: none;
+        }
+        
+        &-items{
+            display: flex;
+            align-items: center;
+            color: var($color-secondary-grey);
+
+            @include respons(samsung-A71){ 
+                flex-direction: column;
+                margin-top: 12rem;
+                position: absolute;
+                margin-left: -47.5rem;
+                background-color: rgba($color: green, $alpha: 0.8);
+                padding: 30.2rem;
+                margin-top: -10rem;
+                opacity: 0.9;
+                
+            }
+            
+        }
+
+        &-list{
+            list-style: none;
+            color: var($color-secondary-grey);
+            display: flex;
+            align-items: center;
+
+            @include respons(samsung-A71){
+                background-color: black;
+                padding: 1rem 7rem;
+                border-radius: 38px;
+                margin-top: 4rem;
+          }
+
+            &-svg{
+                width: 1.2rem;
+                height: 1.3rem;
+                 margin-right: 7px;
+                 fill: var(--color-grey-dark);
+                 
+                 @include respons(samsung-A71){
+                        width: 5rem;
+                        height: 4rem;
+                        margin-right: 2rem;
+                }
+
+                 &-img{
+                    margin-left: 5rem;
+
+                    @include respons(samsung-A71){
+                        
+                   }
+
+                 } 
+            }
+        }   
+
+        &-links{
+            margin-right: 3.5rem;  
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #999999;
+            font-weight: 400;
+
+            @include respons(samsung-A71){
+                 font-size: 5rem;
+                 color: white;
+                 width: 10rem;
+            }
+        }
+    }
+     
+}
+
+
+
+
+
+
+
+
+.media{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 4rem;
+    padding: 2.2rem;
+
+
+    // #slider{
+    //     overflow: hidden;
+
+    // }
+
+    // #slider figure{
+    //     position: relative;
+         
+      
+    //     left: 0;
+    //     animation: 20s slider infinite  ;
+    // }
+
+    @include respons(samsung-A71){
+        grid-template-columns: 1fr;
+        grid-template-rows: 27.4rem;
+    } 
+
+     
+
+
+    &-right{
+        
+        &-img{
+            height: 25rem;
+            width: 60rem;
+            margin-left: -3rem;
+
+            @include respons(samsung-A71){
+                height: 33rem;
+                width: 89rem;
+                margin-left: -3rem;
+            } 
+        }
+
+        
+    }
+
+    &-left{
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+
+        @include respons(samsung-A71){
+            display: grid;
+             grid-template-rows: repeat(3,1fr);
+             margin-top: 5rem;
+        } 
+        
+        &-img{
+            height: 8rem; 
+            width: 30rem;
+            padding: 0 1.5rem;
+            margin-top: 0.2rem;
+            @include transition;
+
+            @include respons(samsung-A71){
+                height: 25rem;
+                width: 85rem;
+                margin-top: 2.5rem;
+            } 
+            
+        
+            &:hover{ 
+                transform: scale(1.05);
+            }  
+        }
+        
+    }
+}
+
+
+
+ 

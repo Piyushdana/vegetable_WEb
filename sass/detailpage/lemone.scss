@@ -1,0 +1,129 @@
+// text area mixin
+
+@mixin textarea {
+    border-radius: 12px;
+    padding: 1rem 0.8rem;
+    height: 12rem;
+    width: 40rem;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+.detailfruit{
+    display: grid;
+    grid-template-columns: 35rem 40rem;
+    padding: 1.5rem 2rem;
+
+    &-l{
+
+        &-img{
+            height: 24rem;
+            padding: 0rem 3rem;
+        }   
+
+        &-discount{
+            position: absolute;
+            margin-left: 2.5rem;
+            background-color: var(--color-orange);
+            padding: 0.3rem 0.8rem;
+            border-radius:2.5px;
+            border-bottom-right-radius: 14px;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: sans-serif;
+            color: white;
+            margin-top: 1rem;
+        }
+    }
+
+
+    &-r{
+        padding: 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+
+
+        &-head{
+            font-size: 24PX;
+            font-family: sans-serif;
+            font-weight: 100;
+            opacity: 0.8;
+            padding: 0.8rem 0;
+            letter-spacing: 2px;
+        }
+
+        &-piece{
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: 100;
+            opacity: 0.9;
+            padding: 0.8rem 0;
+        }
+
+        &-inr{
+            height: 1.4rem;
+            width: 1.4rem;
+        }
+
+        &-bottom{
+            display: flex;
+
+            &-d{
+                margin-right: 3rem;
+                font-size: 17px;
+                font-weight: 200;
+                font-family: sans-serif;
+                padding-bottom: 2px;
+                opacity: 0.7;
+
+                overflow: hidden;
+
+                &:hover,
+                &:active{
+                    border-bottom: 2px solid var(--color-primay);
+                    overflow: hidden;
+                    opacity: 1;
+                }
+
+                
+            }
+
+            &-textarea{
+                
+
+                &-1{ 
+                        @include textarea;
+                        border: 1px solid rgba($color: #000000, $alpha: 0.61)
+
+                        
+                }
+
+                &-2{
+                    @include textarea;
+                }
+
+                &-3{
+                    @include textarea;
+                }
+
+                
+            }
+
+            
+
+            
+        }
+
+         
+    }
+}  
+
+
+
+ 
